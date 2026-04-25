@@ -1,82 +1,80 @@
-🌍 Multilingual Language Detection System
-📌 Overview
+## 🌍 Multilingual Language Detection System
 
-A machine learning system that detects English, Kiswahili, Sheng, and Kamba in text, designed for code-mixed conversations common in Kenya.
+A machine learning system that detects **English, Kiswahili, Sheng, and Kamba**, designed for **code-mixed Kenyan conversations**.
 
-⚠️ Problem
+---
 
-Traditional language detectors struggle with:
+## ⚠️ Problem
 
-Code-switching
-Sheng (slang)
-Local dialects
+Traditional detectors struggle with **code-switching, Sheng, and local dialects**, leading to poor real-world performance.
 
-This leads to poor performance in real-world Kenyan text.
+---
 
-🎯 Objectives
-Build a multilingual classifier
-Apply NLP preprocessing
-Train & evaluate models
-Deploy a working interface
-📊 Dataset
-600 samples (balanced):
-English (150)
-Kiswahili (150)
-Sheng (150)
-Kamba (150)
+## 🎯 Objectives
 
-Sources: Local conversations, manual collection, X (Twitter), lughayangu.com
+* Build a multilingual classifier
+* Apply NLP preprocessing
+* Train & evaluate models
+* Deploy a simple interface
 
-⚙️ Methodology
+---
 
-Preprocessing
+## 📊 Dataset
 
-Lowercasing, punctuation removal
-Tokenization & stopword removal
-Sheng normalization
+* **600 balanced samples** (150 per language)
+* Sources: local conversations, manual collection, X, lughayangu.com
 
-Feature Extraction
+---
 
-TF-IDF
+## ⚙️ Method
 
-Models
+* **Preprocessing:** cleaning, tokenization, stopwords, Sheng normalization
+* **Features:** TF-IDF
+* **Models:** Naive Bayes, Logistic Regression
+* **Split:** 80/20
 
-Naive Bayes
-Logistic Regression
+---
 
-Split
+## 📈 Evaluation
 
-80% Train / 20% Test
-📈 Evaluation
-Accuracy
-Precision
-Recall
-F1 Score
-Confusion Matrix
-🌐 Deployment
+Accuracy, Precision, Recall, F1 Score, Confusion Matrix
 
-Built with Streamlit
+---
 
-Text input
-Real-time prediction
-Confidence score
-▶️ Usage
+## 🌐 Deployment
+
+Streamlit app with **real-time prediction + confidence score**
+
+---
+
+## ▶️ Usage
+
+```python
 from model import predict_language
 
-text = "Nafika kejani later"
-prediction, confidence = predict_language(text)
+prediction, confidence = predict_language("Nafika kejani later")
 print(prediction, confidence)
-🔥 Key Features
-Supports Kenyan languages
-Handles slang & code-switching
-Lightweight and fast
-Real-time predictions
-🌱 Future Work
-Add more African languages
-Improve Sheng dictionary
-Use deep learning models
-Deploy as API
-👤 Author
+```
 
-Emmanuel Baraka Ngunnzi
+---
+
+## 🔥 Features
+
+* Supports Kenyan languages
+* Handles slang & code-mixing
+* Fast and lightweight
+
+---
+
+## 🌱 Future Work
+
+Expand languages, improve Sheng dictionary, use deep learning, deploy API
+
+---
+
+## 👤 Author
+
+**Emmanuel Baraka Ngunnzi**
 Data Analyst | NLP Enthusiast 🌍
+
+
